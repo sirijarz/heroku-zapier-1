@@ -5,7 +5,9 @@ var mongoClient = require("mongodb").MongoClient;
 if(process.env.NODE_ENV == "development"){
   var url = "mongodb://" + process.env.MONGO + "/Marsview?authSource=admin";
 }else{
-  var url = "mongodb://" + process.env.MONGO + "/Marsview";
+  // var url = "mongodb://" + process.env.MONGO + "/Marsview";
+
+ var url = "mongodb://localhost/Marsview";
 }
 
 // var url = "mongodb://" + process.env.MONGO + "/Marsview1";
