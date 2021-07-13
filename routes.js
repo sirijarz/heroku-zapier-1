@@ -49,16 +49,6 @@ router.post('/integrations/zapier/printdata/:email', function(req,res){
     })
 })
 
-
-
-
-
-
-
-
-
-
-
 app.use(router);
   
 app.listen(PORT, function(err){

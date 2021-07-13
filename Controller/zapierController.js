@@ -10,7 +10,7 @@ return function(email){
       const user = zapierUser({email: email, api_key: uuidv4()});
       zapierDAO.createApikey(user).then(function (response){
          if(response.status == true){
-              resolve(user)
+              resolve(response)
     } 
 })
 })
@@ -35,7 +35,7 @@ var printData = function(zapierDAO, zapierEntity){
             //  const user = zapierUser({ data : data})
             zapierDAO.printData(email, updateObj).then(function(response){
                 if(response.status == true){
-                    resolve(updateObj)
+                    resolve(response)
                 }
             })
         })

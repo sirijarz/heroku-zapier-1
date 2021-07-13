@@ -59,7 +59,7 @@ var printData = function (mongoConnection){
             //  var data = Object.assign({},data)
         return new Promise(function(resolve,reject){
             
-            db.collection('mv_sm_zapier').updateOne({'email': email},{ $set: { 'data': updateObj.data}},function(err,result){
+            db.collection('mv_sm_zapier').update({'email': email},{ $set: { 'data': updateObj.data}},function(err,result){
 
                 if(err){
                     responseObj.status = false;
@@ -67,9 +67,10 @@ var printData = function (mongoConnection){
                     responseObj.msg = "Error saving setting please try again later";
                     resolve(responseObj)
                 }else{
+                    
                     responseObj.status = true;
                     responseObj.data = result;
-
+                    console.log(result)
                     resolve(responseObj)
                 }
             })

@@ -4,7 +4,7 @@ var zapierUser = function create({
     api_key,
 
     data :{
-        email,
+        
         downloadUrl,
         userId,
         title,
